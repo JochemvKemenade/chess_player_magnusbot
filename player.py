@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 """
 TransformerPlayer — Magnus Carlsen-style chess player.
 Fine-tuned Qwen2.5-0.5B on Magnus Carlsen's Lichess games.
@@ -14,16 +13,6 @@ import math
 import chess
 from typing import Optional
 from transformers import AutoTokenizer, AutoModelForCausalLM
-
-=======
-import chess
-import random
-import re
-import torch
-from typing import Optional
-from transformers import AutoTokenizer, AutoModelForCausalLM
-
->>>>>>> parent of 49cac54 (transformer model)
 from chess_tournament.players import Player
 
 
