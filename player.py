@@ -118,12 +118,12 @@ class TransformerPlayer(Player):
         if self._tokenizer.pad_token is None:
             self._tokenizer.pad_token = self._tokenizer.eos_token
 
-        dtype = torch.float32 if self._device == "cpu" else torch.float16
         self._model = AutoModelForCausalLM.from_pretrained(
             self.HF_MODEL_ID,
-            torch_dtype=dtype,
+            torch_dtype="auto",
+            device_map="auto",
             trust_remote_code=True,
-        ).to(self._device)
+        )
         self._model.eval()
         print(f"[{self.name}] Ready.")
 
