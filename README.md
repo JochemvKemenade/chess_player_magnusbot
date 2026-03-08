@@ -1,6 +1,6 @@
 # Chess Transformer Player
 
-Minimal template for the ML Chess assignment.
+For the ML Chess assignment.
 
 ## Interface
 
